@@ -19,7 +19,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio:1/1;
 }
 
 .choice:hover {
@@ -30,7 +29,7 @@ h1 {
 img {
   width: 100%;
   min-width: 100%;
-  height: 90%;
+  height: 96%;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -81,4 +80,18 @@ img {
     width: 50%;
     max-width: none;
   }
+}
+
+#reset-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #081b31;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#reset-btn:hover {
+  background-color: #0a223d;
 }

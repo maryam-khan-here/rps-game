@@ -1,6 +1,7 @@
 let userScore = 0;
 let compScore = 0;
 
+const resetBtn = document.querySelector("#reset-btn");
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 
@@ -23,12 +24,12 @@ const showWinner = (userWin, userChoice, compChoice) => {
     userScore++;
     userScorePara.innerText = userScore;
     msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
-    msg.style.backgroundColor = "green";
+    msg.style.backgroundColor = "#081b31";
   } else {
     compScore++;
     compScorePara.innerText = compScore;
     msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
-    msg.style.backgroundColor = "red";
+    msg.style.backgroundColor = "#081b31";
   }
 };
 
@@ -61,3 +62,14 @@ choices.forEach((choice) => {
     playGame(userChoice);
   });
 });
+
+const resetGame = () => {
+  userScore = 0;
+  compScore = 0;
+  userScorePara.innerText = userScore;
+  compScorePara.innerText = compScore;
+  msg.innerText = "Play your move";
+  msg.style.backgroundColor = "#081b31";  // same as initial
+};
+
+resetBtn.addEventListener("click", resetGame);
