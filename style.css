@@ -38,6 +38,17 @@ h1 {
   animation: shake 0.6s ease;
 }
 
+/* You could define a confetti or trophy pop-up too */
+.trophy {
+  position: absolute;
+  top: 20px;
+  left: 25%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: gold;
+  opacity: 0;
+  animation: pop 0.8s forwards;
+}
 
 img {
   width: 100%;
@@ -45,18 +56,6 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-}
-
-/* You could define a confetti or trophy pop-up too */
-.trophy {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem;
-  color: gold;
-  opacity: 0;
-  animation: pop 0.8s forwards;
 }
 
 
